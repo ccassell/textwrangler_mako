@@ -134,21 +134,18 @@
 
 
 <key>Function Pattern</key>
-<string><![CDATA[
-(?x:
+<string><![CDATA[(?x:
     (?P<function>
-        <%def\sname=['"]
+        (<%)?def[\s](name=['"])?
         (?P<function_name>
             [a-zA-Z0-9_]+
         )
-		\s?
+		[\s]?
 		\(
-	        [\w\s=,\*\\'"]*
-        \)\s*['"]\s*>
+	        [\w\s=,\*\\'".]*
+        \)([\s]*['"][^>]*>)?
     )
-)
-]]>
-</string>
+)]]></string>
 
 	</dict>
 </dict>
